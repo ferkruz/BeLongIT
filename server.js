@@ -10,3 +10,6 @@ app.use(express.static('./dist/apispiner'));
 app.get('/*', (req, res) =>
     res.sendFile('index.html', {root: 'dist/apispiner/'}),
 );
+
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
