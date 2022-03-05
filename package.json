@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",    
     "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
+    "preinstall": "npm install --save express path",
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
