@@ -1,0 +1,15 @@
+{
+    "menu":{
+	"menu1": "Hori buruz",
+	"menu2": "Zerbitzuak",
+	"menu3": "Lanak",
+	"menu4": "Harremanetarako",
+	"menu5": "Berriak"
+        },
+    "home": {
+        "title": "Aplikazio angeluarra nazioartekotzea",
+        "englishLabel": "Ingelesa",
+        "spanishLabel": "Gaztelaniaz",
+	"euskerazLabel": "Euskera"
+    }
+}

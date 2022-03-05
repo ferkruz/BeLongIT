@@ -1,0 +1,15 @@
+{    
+   "menu":{
+	"menu1": "About",
+	"menu2": "Servicios",
+	"menu3": "Trabajo",
+	"menu4": "Contacto",
+	"menu5": "Noticias"
+    },
+    "home": {
+        "title": "Internacionalización de una aplicación angular",
+        "englishLabel": "Ingles",
+        "spanishLabel": "Español",
+	"euskerazLabel": "Euskera"
+    }
+}

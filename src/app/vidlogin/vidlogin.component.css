@@ -1,0 +1,32 @@
+
+  #ad-section {
+    padding: 0 ;
+    margin: 0 auto;
+  }
+  
+  #ad-container {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    align-content: flex-end;
+  }
+  
+  #ad-video {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  #ad-content {
+    position: absolute;
+    color: #fff;
+    margin: 20rem 5rem;
+    padding: 3rem;
+    background-color: #fff;
+    align-self: flex-end;
+    border-radius: 0rem; /*This is only working on one corner*/
+  }

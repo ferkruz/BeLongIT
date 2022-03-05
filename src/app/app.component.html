@@ -1,0 +1,945 @@
+<router-outlet></router-outlet>
+
+<!--========================================
+=            Navigation Section            =
+=========================================-->
+
+<nav class="navbar main-nav border-less fixed-top navbar-expand-lg p-0">
+  <div class="container-fluid p-0">
+      <!-- logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item dropdown active dropdown-slide">
+          <a class="nav-link" href="#"  data-toggle="dropdown">Home 
+            <span>/</span>
+          </a>
+          <!-- Dropdown list -->
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="index.html">Homepage</a>
+            <a class="dropdown-item" href="homepage-two.html">Homepage 2</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="speakers.html">{{ 'menu.menu1' | translate }}
+            <span>/</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown dropdown-slide">
+          <a class="nav-link" href="#" data-toggle="dropdown">Pages<span>/</span></a>
+            <!-- Dropdown list -->
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="about-us.html">About Us</a>
+              <a class="dropdown-item" href="single-speaker.html">Single Speaker</a>
+              <a class="dropdown-item" href="gallery.html">Gallery</a>
+              <a class="dropdown-item" href="gallery-two.html">Gallery-02</a>
+              <a class="dropdown-item" href="testimonial.html">Testimonial</a>
+              <a class="dropdown-item" href="pricing.html">Pricing</a>
+              <a class="dropdown-item" href="FAQ.html">FAQ</a>
+              <a class="dropdown-item" href="404.html">404</a>
+            </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="schedule.html">{{ 'menu.menu2' | translate }}<span>/</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sponsors.html">{{ 'menu.menu3' | translate }}<span>/</span></a>
+        </li>
+        <li class="nav-item dropdown dropdown-slide">
+          <a class="nav-link" href="#"  data-toggle="dropdown">{{ 'menu.menu5' | translate }}
+            <span>/</span>
+          </a>
+          <!-- Dropdown list -->
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="news.html">News without sidebar</a>
+            <a class="dropdown-item" href="news-right-sidebar.html">News with right sidebar</a>
+            <a class="dropdown-item" href="news-left-sidebar.html">News with left sidebar</a>
+            <a class="dropdown-item" href="news-single.html">News Single</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">{{ 'menu.menu4' | translate }}</a>
+        </li>
+      </ul>
+      <a href="#" class="ticket">
+        <app-menu></app-menu>
+      </a>
+      </div>
+  </div>
+</nav>
+
+
+
+<section class="section"><app-vidlogin></app-vidlogin></section>
+
+<!--===========================
+=            About            =
+============================-->
+
+<section class="section about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-md-6 align-self-center">
+				<div class="image-block two bg-about">
+					<img class="img-fluid" src="https://via.placeholder.com/510x345" alt="">
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 align-self-center ml-lg-auto">
+				<div class="content-block">
+					<h2>http API Loader <span class="alternate">INTERCEPTOR</span></h2>
+					<div class="description-one">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm tempor incididunt ut labore dolore magna aliqua enim ad
+						</p>
+					</div>
+					<div class="description-two">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmtempor incididunt ut labore et dolore magna aliq enim ad minim</p>
+					</div>
+					<ul class="list-inline">
+            <li class="list-inline-item">					
+              <button class="btn btn-main-md" (click)="makeHttpCall()">Make Http Call</button>
+						</li>
+						<li class="list-inline-item">
+							<a href="#" class="btn btn-transparent-md">Read more</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of About  ====-->
+
+<app-reactive-forms></app-reactive-forms>
+
+<!--====
+<ul>
+  <li *ngFor="let dato of totalAngularPackages">{{dato.id}}, {{dato.email}}</li>
+</ul>
+====-->
+
+<section class="section schedule two">
+	<div class="container">
+
+			<div class="col-lg-14">
+        <div class="section-title">
+					<h3>API <span class="alternate">jsonplaceholder</span></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusm tempor incididunt ut labore</p>
+				</div>
+				<div class="schedule-contents">
+					<div class="tab-content" id="pills-tabContent">
+					  <div class="tab-pane fade show active schedule-item">
+					  	<!-- Headings -->
+					  	<ul class="m-0 p-0">
+					  		<li class="headings text-center">
+					  			<div class="time">Time</div>
+					  			<div class="speaker">Speaker</div>
+					  			<div class="subject">Subject</div>
+					  			<div class="venue">Venue</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details" *ngFor="let dato of totalAngularPackages | paginate: { itemsPerPage: 10, currentPage: p }">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">{{dato.id}}</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">{{dato.email}}</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">{{dato.name}}</div>
+							  		<!-- Venue -->
+							  		<div class="venue">{{dato.postId}}</div>
+					  			</div>
+					  		</li>
+					  	</ul>
+
+              <pagination-controls (pageChange)="p = $event"  
+			  previousLabel="Prev"
+			  nextLabel="Sig"></pagination-controls>
+
+					  </div>
+					  <div class="tab-pane fade schedule-item">
+					  	<!-- Headings -->
+					  	<ul class="m-0 p-0">
+					  		<li class="headings text-center">
+					  			<div class="time">Time</div>
+					  			<div class="speaker">Speaker</div>
+					  			<div class="subject">Subject</div>
+					  			<div class="venue">Venue</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details text-center">
+					  			<div class="block">
+					  				<!-- time -->
+							  		<div class="time">
+							  			<span class="time">dato.id</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Samanta Doe</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Introduction to Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium A</div>
+					  			</div>
+					  		</li>
+					  	</ul>
+					  </div>
+					</div>
+				</div>
+			</div>
+
+	</div>
+</section>
+
+<!--==============================
+=            Schedule            =
+===============================-->
+
+<section class="section schedule two">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3>Event <span class="alternate">Schedule</span></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusm tempor incididunt ut labore</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2">
+				<div class="schedule-tab">
+					<ul class="nav nav-pills text-center">
+					  <li class="nav-item">
+					    <a class="nav-link active" href="#nov20" data-toggle="pill">
+					    	Day-01
+					    	<span>20 November</span>
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#nov21" data-toggle="pill">
+							Day-02
+					    	<span>21 November</span>
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#nov22" data-toggle="pill">
+							Day-03
+					    	<span>22 November</span>
+					    </a>
+					  </li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-10">
+				<div class="schedule-contents">
+					<div class="tab-content" id="pills-tabContent">
+					  <div class="tab-pane fade show active schedule-item" id="nov20">
+					  	<!-- Headings -->
+					  	<ul class="m-0 p-0">
+					  		<li class="headings text-center">
+					  			<div class="time">Time</div>
+					  			<div class="speaker">Speaker</div>
+					  			<div class="subject">Subject</div>
+					  			<div class="venue">Venue</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details text-center">
+					  			<div class="block">
+					  				<!-- time -->
+							  		<div class="time">
+							  			<span class="time">9.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Samanta Doe</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Introduction to Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium A</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">10.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Zerad Pawel</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Principle of Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium B</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">12.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Henry Mong</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Wp Requirements</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium C</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">2.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Baily Leo</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Introduction to Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium D</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">3.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Lee Mun</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Useful tips for Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium E</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">3.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Lee Mun</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Useful tips for Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium E</div>
+					  			</div>
+					  		</li>
+					  	</ul>
+					  </div>
+					  <div class="tab-pane fade schedule-item" id="nov21">
+					  	<!-- Headings -->
+					  	<ul class="m-0 p-0">
+					  		<li class="headings text-center">
+					  			<div class="time">Time</div>
+					  			<div class="speaker">Speaker</div>
+					  			<div class="subject">Subject</div>
+					  			<div class="venue">Venue</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details text-center">
+					  			<div class="block">
+					  				<!-- time -->
+							  		<div class="time">
+							  			<span class="time">9.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Samanta Doe</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Introduction to Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium A</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">10.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Zerad Pawel</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Principle of Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium B</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">12.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Henry Mong</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Wp Requirements</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium C</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">2.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Baily Leo</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Introduction to Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium D</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">3.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Lee Mun</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Useful tips for Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium E</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">3.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Lee Mun</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Useful tips for Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium E</div>
+					  			</div>
+					  		</li>
+					  	</ul>
+					  </div>
+					  <div class="tab-pane fade schedule-item" id="nov22">
+					  	<!-- Headings -->
+					  	<ul class="m-0 p-0">
+					  		<li class="headings text-center">
+					  			<div class="time">Time</div>
+					  			<div class="speaker">Speaker</div>
+					  			<div class="subject">Subject</div>
+					  			<div class="venue">Venue</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details text-center">
+					  			<div class="block">
+					  				<!-- time -->
+							  		<div class="time">
+							  			<span class="time">9.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Samanta Doe</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Introduction to Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium A</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">10.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Zerad Pawel</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Principle of Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium B</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">12.00 AM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Henry Mong</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Wp Requirements</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium C</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">2.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Baily Leo</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Introduction to Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium D</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">3.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Lee Mun</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Useful tips for Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium E</div>
+					  			</div>
+					  		</li>
+					  		<!-- Schedule Details -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+						  			<!-- time -->
+							  		<div class="time">
+							  			<span class="time">3.00 PM</span>
+							  		</div>
+							  		<!-- Speaker -->
+							  		<div class="speaker">
+										<span class="name">Lee Mun</span>
+							  		</div>
+							  		<!-- Subject -->
+							  		<div class="subject">Useful tips for Wp</div>
+							  		<!-- Venue -->
+							  		<div class="venue">Auditorium E</div>
+					  			</div>
+					  		</li>
+					  	</ul>
+					  </div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+</section>
+
+<!--====  End of Schedule  ====-->
+
+<!--=============================
+=            Feature            =
+==============================-->
+
+<section class="ticket-feature">
+	<div class="container-fluid m-0 p-0">
+		<div class="row p-0 m-0">
+			<div class="col-lg-7 p-0 m-0">
+				<div class="block bg-timer overlay-dark text-center">
+					<div class="section-title white m-0">
+						<h3>Limited Audience <span class="alternate">Seats</span></h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm</p>
+					</div>
+					<!-- Coundown Timer -->
+					<div class="timer"></div>
+					<a href="#" class="btn btn-main-md">Buy Ticket</a>
+				</div>
+			</div>
+			<div class="col-lg-5 p-0">
+				<div class="block-2">
+					<div class="row no-gutters">
+						<div class="col-6">
+							<!-- Service item -->
+							<div class="service-item">
+								<i class="fa fa-microphone"></i>
+								<h5>8 Speakers</h5>
+							</div>
+						</div>
+						<div class="col-6">
+							<!-- Service item -->
+							<div class="service-item">
+								<i class="fa fa-flag"></i>
+								<h5>500 + Seats</h5>
+							</div>
+						</div>
+						<div class="col-6">
+							<!-- Service item -->
+							<div class="service-item">
+								<i class="fa fa-ticket"></i>
+								<h5>300 tickets</h5>
+							</div>
+						</div>
+						<div class="col-6">
+							<!-- Service item -->
+							<div class="service-item">
+								<i class="fa fa-calendar"></i>
+								<h5>3 days event</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Feature  ====-->
+
+
+<!--==========================
+=            News            =
+===========================-->
+
+<section class="news-hr section mb-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3>Eventre <span class="alternate">News</span></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row no-gutters">
+			<div class="col-lg-6">
+				<article class="news-post-hr">
+					<div class="post-thumb">
+						<a href="news-single.html">
+							<img src="images/news/post-thumb-hr-one.jpg" alt="post-image" class="img-fluid">
+						</a>
+					</div>
+					<div class="post-contents border-top">
+						<div class="post-title"><h6><a href="news-single.html">Default title here</a></h6></div>
+						<div class="post-exerpts">
+							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed doeiuse tempor incididunt ut
+							</p>
+						</div>
+
+						<div class="date">
+							<h4>20<span>May</span></h4>
+						</div>
+						<div class="more">
+							<a href="news-single.html">Show more</a>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="col-lg-6">
+				<article class="news-post-hr">
+					<div class="post-thumb">
+						<a href="news-single.html">
+							<img src="images/news/post-thumb-hr-two.jpg" alt="post-image" class="img-fluid">
+						</a>
+					</div>
+					<div class="post-contents border-top">
+						<div class="post-title"><h6><a href="news-single.html">Default title here</a></h6></div>
+						<div class="post-exerpts">
+							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed doeiuse tempor incididunt ut
+							</p>
+						</div>
+						
+						<div class="date">
+							<h4>20<span>May</span></h4>
+						</div>
+						<div class="more">
+							<a href="news-single.html">Show more</a>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="col-lg-6">
+				<article class="news-post-hr">
+					<div class="post-thumb">
+						<a href="news-single.html">
+							<img src="images/news/post-thumb-hr-three.jpg" alt="post-image" class="img-fluid">
+						</a>
+					</div>
+					<div class="post-contents">
+						<div class="post-title"><h6><a href="news-single.html">Default title here</a></h6></div>
+						<div class="post-exerpts">
+							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed doeiuse tempor incididunt ut
+							</p>
+						</div>
+						
+						<div class="date">
+							<h4>20<span>May</span></h4>
+						</div>
+						<div class="more">
+							<a href="news-single.html">Show more</a>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="col-lg-6">
+				<article class="news-post-hr">
+					<div class="post-thumb">
+						<a href="news-single.html">
+							<img src="images/news/post-thumb-hr-four.jpg" alt="post-image" class="img-fluid">
+						</a>
+					</div>
+					<div class="post-contents">
+						<div class="post-title"><h6><a href="news-single.html">Default title here</a></h6></div>
+						<div class="post-exerpts">
+							<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed doeiuse tempor incididunt ut
+							</p>
+						</div>
+						
+						<div class="date">
+							<h4>20<span>May</span></h4>
+						</div>
+						<div class="more">
+							<a href="news-single.html">Show more</a>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of News  ====-->
+
+
+
+<!--====  End of Pricing Table  ====-->
+
+<div class="block">
+	<div class="title text-left">
+		<h3>Register to <span class="alternate">Eventre</span></h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+	</div>
+	<form action="#" class="row">
+		<div class="col-md-6">
+			<input type="text" class="form-control main" placeholder="Your Name">
+		</div>
+		<div class="col-md-6">
+			<input type="email" class="form-control main" placeholder="Email">
+		</div>
+		<div class="col-md-6">
+			<input type="text" class="form-control main" placeholder="Phone">
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<select class="form-control main" id="select-ticket">
+				  <option>Ticket Type</option>
+				  <option>1</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				  <option>5</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-12">
+			<button type="submit" class="btn btn-white-md">Register Now</button>
+		</div>
+	</form>
+</div>
+
+
+<!--================================
+=            Google Map            =
+=================================-->
+
+<section class="map new">
+	<!-- Google Map -->
+	<div id="map"></div>
+	<div class="address-block">
+		<h4>Docklands Convention</h4>
+		<ul class="address-list p-0 m-0">
+			<li><i class="fa fa-home"></i><span>1201 Park Street, Fifth Avenue, <br>Dhanmondy, Dhaka.</span></li>
+			<li><i class="fa fa-phone"></i><span>[88] 657 524 332</span></li>
+		</ul>
+		<a href="#" class="btn btn-white-md">Get Direction</a>
+	</div>
+	<div class="register overlay-dark bg-registration-two">
+		<div class="block">
+			<div class="title text-center">
+				<h3>Register to <span class="alternate">Eventre</span></h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			</div>
+			<form action="#" class="row">
+				<div class="col-md-6">
+					<input type="text" class="form-control main" placeholder="Your Name">
+				</div>
+				<div class="col-md-6">
+					<input type="email" class="form-control main" placeholder="Email">
+				</div>
+				<div class="col-md-6">
+					<input type="text" class="form-control main" placeholder="Phone">
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<select class="form-control main" id="select-ticket">
+					      <option>Ticket Type</option>
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select>
+					</div>
+				</div>
+				<div class="col-12 text-center">
+					<button type="submit" class="btn btn-white-md">Register Now</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Google Map  ====-->
+
+<!--============================
+=            Footer            =
+=============================-->
+
+<footer class="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block text-center">
+            <div class="footer-logo">
+              <img src="images/footer-logo.png" alt="logo" class="img-fluid">
+            </div>
+            <ul class="social-links-footer list-inline">
+              <li class="list-inline-item">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#"><i class="fa fa-instagram"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#"><i class="fa fa-rss"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#"><i class="fa fa-vimeo"></i></a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+</footer>
+<!-- Subfooter -->
+<footer class="subfooter">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 align-self-center">
+        <div class="copyright-text">
+          <p><a href="#">Eventre</a> &#169; 2017 All Right Reserved</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+          <a href="#" class="to-top"><i class="fa fa-angle-up"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel title="Simple">
+    <ng-template ngbPanelContent>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+      labore sustainable VHS.
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <span>&#9733; <b>Fancy</b> title &#9733;</span>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+      labore sustainable VHS.
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Disabled" [disabled]="true">
+    <ng-template ngbPanelContent>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+      labore sustainable VHS.
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+
+<app-my-loader></app-my-loader>
