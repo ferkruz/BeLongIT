@@ -1,4 +1,4 @@
-{    
+ {    
    "menu":{
 	"menu1": "About",
 	"menu2": "Servicios",
@@ -9,7 +9,21 @@
     "home": {
         "title": "Internacionalización de una aplicación angular",
         "englishLabel": "Ingles",
-        "spanishLabel": "Castellano",
-	"euskerazLabel": "Euskera"
+        "spanishLabel": "Español",
+	    "euskerazLabel": "Euskera"
+    },
+    "form":{
+        "Formtitle": "Estamos en",
+        "Formtitle2": "Contacto",
+        "FormTitle": "Título",
+        "FormFirstName": "Nombre",
+        "FormLastName": "Apellido",
+        "FormDBirth": "Fecha de nacimiento",
+        "FormEmail": "Correo electrónico",
+        "FormPassword": "Contraseña",
+        "FormConfirmPassword": "Confirmar Contraseña",
+        "FormAcceptTerms": "Acepto Términos y Condiciones",
+        "Formbuttonsend": "Enviar",
+        "Formbuttonreset": "Cancelar"
     }
 }

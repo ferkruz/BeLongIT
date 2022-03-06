@@ -10,6 +10,19 @@
         "title": "Aplikazio angeluarra nazioartekotzea",
         "englishLabel": "Ingelesa",
         "spanishLabel": "Gaztelaniaz",
-	"euskerazLabel": "Euskera"
+	    "euskerazLabel": "Euskera"
+    },
+    "form":{
+        "Formtitle": "Jarri",
+        "Formtitle2": "Harremanetan",
+        "FormTitle": "Izenburua",
+        "FormFirstName": "Izena",
+        "FormLastName": "Abizena",
+        "FormDBirth": "Jaiotze-data",
+        "FormEmail": "E-posta",
+        "FormPassword": "Pasahitza",
+        "FormConfirmPassword": "Berretsi pasahitza",
+        "Formbuttonsend": "Bidali",
+        "Formbuttonreset": "Berrezarri"
     }
 }
