@@ -1,0 +1,27 @@
+<div class="agm-container">
+    <h3>Angular <span class="alternate">Google Maps</span></h3>    
+
+    <agm-map
+      [zoom]="15"
+      [latitude]="lat"
+      [longitude]="lng"
+      (mapReady)="onMapReady($event)"
+    >
+        <agm-marker 
+        [latitude]="lat" 
+        [longitude]="lng">    
+      </agm-marker>
+    </agm-map>
+    <br />
+    <div *ngIf="pointList.length>0" class="display-flex">
+      <button class="btn btn-transparent-md" (click)="deleteSelectedShape()">Borrar Área</button>
+    </div>
+  
+    
+    <agm-map [latitude]="lat" [longitude]="lng">
+      <agm-direction 
+        [origin]="origin" 
+        [destination]="destination"
+      >
+      </agm-direction>
+    </agm-map>
