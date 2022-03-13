@@ -31,12 +31,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-	    "allowedCommonJsDependencies": [
-		"core-js",
-                "raf",
-                "xlsx",
-                "@babel/runtime"
- 	    ],	
+
           },
           "configurations": {
             "production": {
