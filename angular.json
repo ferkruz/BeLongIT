@@ -32,7 +32,10 @@
             ],
             "scripts": [],
 	    "allowedCommonJsDependencies": [
-		"core-js"
+		"core-js",
+                "raf",
+                "xlsx",
+                "@babel/runtime"
  	    ],	
           },
           "configurations": {
