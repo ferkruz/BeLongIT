@@ -11,19 +11,5 @@
         "englishLabel": "English",
         "spanishLabel": "Spanish",
 	"euskerazLabel": "Euskera"
-    },
-    "form":{
-    "Formtitle": "Get in",
-    "Formtitle2": "Touch",
-	"FormTitle": "Title",
-	"FormFirstName": "First Name",
-	"FormLastName": "Last Name",
-    "FormDBirth": "Date of Birth",
-    "FormEmail": "Email",
-    "FormPassword": "Password",
-    "FormConfirmPassword": "Confirm Password",
-    "FormAcceptTerms": "Accept Terms & Conditions",
-    "Formbuttonsend": "Send",
-    "Formbuttonreset": "Cancel"
     }
 }

@@ -11,8 +11,9 @@ export class AppComponent {
   p= 0;  // put the default values
 
   totalAngularPackages:any[];
-
-  constructor(private http: HttpClient) {
+  constructor(
+    private http: HttpClient
+  ) {
     this.totalAngularPackages=[];
    }
 
@@ -23,5 +24,4 @@ export class AppComponent {
         this.totalAngularPackages = datos;
       });
   }
-
 }

@@ -4,13 +4,13 @@
 			<div class="col-12">
 
 <div class="section-title">
-    <h3>{{ 'form.Formtitle' | translate }}<span class="alternate"> {{ 'form.Formtitle2' | translate }}</span></h3>
+    <h3>Get in <span class="alternate">Touch</span></h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, velit.</p>
 </div>
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="form-row">
                 <div class="form-group col">
-                    <label>{{ 'form.FormTitle' | translate }}</label>
+                    <label>Title</label>
                     <select id="select-ticket" formControlName="title" class="form-control main" [ngClass]="{ 'is-invalid': submitted && f['title'].errors }">
                         <option value=""></option>
                         <option value="Mr">Mr</option>
@@ -25,14 +25,14 @@
                 
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label>{{ 'form.FormFirstName' | translate }}</label>
+                        <label>First Name</label>
                         <input type="text" formControlName="firstName" class="form-control main" [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }" />
                         <div class="profession" *ngIf="submitted && f['firstName'].errors" class="invalid-feedback">
                             <div *ngIf="f['firstName'].errors?.['required']">First Name Campo Requerido</div>
                         </div>
                     </div>
                     <div class="form-group col-md-6">
-                        <label>{{ 'form.FormLastName' | translate }}</label>
+                        <label>Last Name</label>
                         <input type="text" formControlName="lastName" class="form-control main" [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }" />
                         <div *ngIf="submitted && f['lastName'].errors" class="invalid-feedback">
                             <div *ngIf="f['lastName'].errors?.['required']">Last Name Campo Requerido</div>
@@ -42,7 +42,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col">
-                    <label>{{ 'form.FormDBirth' | translate }}</label>
+                    <label>Date of Birth</label>
                     <input type="date" formControlName="dob" class="form-control main" [ngClass]="{ 'is-invalid': submitted && f['dob'].errors }" />
                     <div *ngIf="submitted && f['dob'].errors" class="invalid-feedback">
                         <div *ngIf="f['dob'].errors?.['required']">Date of Birth Campo Requerido</div>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="form-group col">
-                    <label>{{ 'form.FormEmail' | translate }}</label>
+                    <label>Email</label>
                     <input type="text" formControlName="email" class="form-control main" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
                     <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
                         <div *ngIf="f['email'].errors?.['required']">Email Campo Requerido</div>
@@ -60,7 +60,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col">
-                    <label>{{ 'form.FormPassword' | translate }}</label>
+                    <label>Password</label>
                     <input type="password" formControlName="password" class="form-control main" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
                     <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
                         <div *ngIf="f['password'].errors?.['required']">Password Campo Requerido</div>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="form-group col">
-                    <label>{{ 'form.FormConfirmPassword' | translate }}</label>
+                    <label>Confirm Password</label>
                     <input type="password" formControlName="confirmPassword" class="form-control main" [ngClass]="{ 'is-invalid': submitted && f['confirmPassword'].errors }" />
                     <div *ngIf="submitted && f['confirmPassword'].errors" class="invalid-feedback">
                         <div *ngIf="f['confirmPassword'].errors?.['required']">Confirm Password Campo Requerido</div>
@@ -78,16 +78,16 @@
             </div>
             <div class="form-group form-check">
                 <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f['acceptTerms'].errors }" />
-                <label for="acceptTerms" class="form-check-label">{{ 'form.FormAcceptTerms' | translate }}</label>
+                <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
                 <div *ngIf="submitted && f['acceptTerms'].errors" class="invalid-feedback">Accept Ts & Cs Campo Requerido</div>
             </div>
 
             <ul class="list-inline">
                 <li class="list-inline-item">
-                    <button class="btn btn-main-md">{{ 'form.Formbuttonsend' | translate }}</button>
+                    <button class="btn btn-main-md">Register</button>
                 </li>
                 <li class="list-inline-item">
-                    <button class="btn btn-transparent-md" type="reset" (click)="onReset()">{{ 'form.Formbuttonreset' | translate }}</button>
+                    <button class="btn btn-transparent-md" type="reset" (click)="onReset()">Cancel</button>
                 </li>
             </ul>
         </form>

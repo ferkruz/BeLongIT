@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 
+
+
 import { LoaderService } from './services/loader.service';
 import { LoaderInterceptor } from './interceptors/loader-interceptor.service';
 import { MyLoaderComponent } from './components/my-loader/my-loader.component';
@@ -24,11 +26,6 @@ import {VgCoreModule} from '@videogular/ngx-videogular/core';
 import {VgControlsModule} from '@videogular/ngx-videogular/controls';
 import {VgOverlayPlayModule} from '@videogular/ngx-videogular/overlay-play';
 import {VgBufferingModule} from '@videogular/ngx-videogular/buffering';
-import { TablepdfComponent } from './tablepdf/tablepdf.component';
-
-import { AgmCoreModule } from '@agm/core';
-import { AgmDirectionModule } from 'agm-direction';
-import { MapsComponent } from './maps/maps.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -51,8 +48,7 @@ const routes: Routes = [
     ReactiveFormsComponent,
     MenuComponent,
     VidloginComponent,
-    TablepdfComponent,
-    MapsComponent
+
   ],
   imports: [
     BrowserModule,
@@ -62,11 +58,6 @@ const routes: Routes = [
     NgbModule,
     NgxPaginationModule,
     FormsModule, 
-    AgmDirectionModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBO-DPJZhfQIiEZLk6pCpxgpsp67r4aCo4',
-      libraries: ['places', 'drawing', 'geometry',]    }),
-  
 
     VgCoreModule,
     VgControlsModule,
